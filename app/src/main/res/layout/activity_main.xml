@@ -46,7 +46,7 @@
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/appTitle" />
 
-        <!-- The box that shows how many stat points you have spent or have left -->
+        <!-- Box for showing how many stat points are spent or remaining -->
         <LinearLayout
             android:id="@+id/attributePoints"
             android:layout_width="0dp"
@@ -61,6 +61,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintWidth_percent=".48">
 
+            <!-- Title for the Attribute Points box -->
             <TextView
                 android:id="@+id/pointsTitle"
                 android:layout_width="match_parent"
@@ -73,13 +74,14 @@
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
+            <!-- Horizontal section splitting Allocated and Remaining points -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
-                <!-- Shows total points used -->
+                <!-- Display for Allocated Points -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -114,7 +116,7 @@
                     android:layout_gravity="center_vertical"
                     android:background="@color/gold" />
 
-                <!-- Shows points still available to spend -->
+                <!-- Display for Remaining Points -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -146,7 +148,7 @@
 
         </LinearLayout>
 
-        <!-- The box containing all the stat sliders (Strength, Wisdom, etc.) -->
+        <!-- Container for the stat sliders (Strength, Intel, etc.) -->
         <LinearLayout
             android:id="@+id/attributesColumn"
             android:layout_width="0dp"
@@ -162,6 +164,7 @@
             app:layout_constraintStart_toStartOf="@id/attributePoints"
             app:layout_constraintEnd_toEndOf="@id/attributePoints">
 
+            <!-- Title for the Attributes section -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -173,14 +176,14 @@
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
-            <!-- These "include" lines load the stat slider designs from a different file -->
+            <!-- Attribute rows: Each one loads a label, slider and value display -->
             <include layout="@layout/attribute_row" android:id="@+id/strengthRow" />
             <include layout="@layout/attribute_row" android:id="@+id/intRow" />
             <include layout="@layout/attribute_row" android:id="@+id/dexRow" />
             <include layout="@layout/attribute_row" android:id="@+id/wisRow" />
         </LinearLayout>
 
-        <!-- The frame where the character portrait image is displayed -->
+        <!-- Frame box to hold and style the character portrait image -->
         <FrameLayout
             android:id="@+id/characterFrame"
             android:background="@drawable/image_container"
@@ -191,6 +194,7 @@
             app:layout_constraintTop_toBottomOf="@id/underTitle"
             app:layout_constraintStart_toStartOf="parent">
 
+            <!-- The actual image where the character will appear -->
             <ImageView
                 android:id="@+id/characterImage"
                 android:layout_width="match_parent"
@@ -200,7 +204,7 @@
                 android:src="@drawable/empty_character" />
         </FrameLayout>
 
-        <!-- The box for typing in the character name -->
+        <!-- Box containing the character name input label and text field -->
         <LinearLayout
             android:id="@+id/nameBox"
             android:layout_width="0dp"
@@ -213,6 +217,7 @@
             app:layout_constraintStart_toStartOf="@id/characterFrame"
             app:layout_constraintEnd_toEndOf="@id/characterFrame">
 
+            <!-- Label for the character name input -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -224,6 +229,7 @@
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
+            <!-- Editable text field for character name -->
             <EditText
                 android:id="@+id/nameInput"
                 android:layout_width="match_parent"
@@ -240,7 +246,7 @@
                 android:autofillHints="null" />
         </LinearLayout>
 
-        <!-- The box for picking a Character Class -->
+        <!-- Container for the class selection label and dropdown menu -->
         <LinearLayout
             android:id="@+id/classBox"
             android:layout_width="0dp"
@@ -253,6 +259,7 @@
             app:layout_constraintStart_toStartOf="@id/attributesColumn"
             app:layout_constraintEnd_toEndOf="@id/attributesColumn">
 
+            <!-- Label for character class selection -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -263,6 +270,7 @@
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
+            <!-- Dropdown spinner to pick a character class -->
             <Spinner
                 android:id="@+id/classSpinner"
                 android:layout_width="match_parent"
@@ -273,7 +281,7 @@
                 android:spinnerMode="dropdown" />
         </LinearLayout>
 
-        <!-- The box for picking Gender -->
+        <!-- Box for character gender label and radio buttons -->
         <LinearLayout
             android:id="@+id/genderBox"
             android:layout_width="0dp"
@@ -286,6 +294,7 @@
             app:layout_constraintStart_toStartOf="@id/nameBox"
             app:layout_constraintEnd_toEndOf="@id/nameBox">
 
+            <!-- Label for gender selection -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -296,6 +305,7 @@
                 android:textStyle="bold"
                 android:paddingBottom="4dp" />
 
+            <!-- List of radio buttons for gender selection -->
             <RadioGroup
                 android:id="@+id/genderGroup"
                 android:layout_width="match_parent"
@@ -344,7 +354,7 @@
 
         </LinearLayout>
 
-        <!-- The box for picking a Race -->
+        <!-- Container for character race label and its dropdown spinner -->
         <LinearLayout
             android:id="@+id/raceBox"
             android:layout_width="0dp"
@@ -359,6 +369,7 @@
             app:layout_constraintStart_toStartOf="@id/classBox"
             app:layout_constraintEnd_toEndOf="@id/classBox">
 
+            <!-- Label for character race selection -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -369,6 +380,7 @@
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
+            <!-- Dropdown spinner to pick character race -->
             <Spinner
                 android:id="@+id/raceSpinner"
                 android:layout_width="match_parent"
@@ -379,7 +391,7 @@
                 android:spinnerMode="dropdown" />
         </LinearLayout>
 
-        <!-- A special invisible line that helps buttons stay at the bottom in landscape view -->
+        <!-- Barrier used to keep the bottom buttons consistently positioned -->
         <androidx.constraintlayout.widget.Barrier
             android:id="@+id/bottomBarrier"
             android:layout_width="wrap_content"
@@ -387,7 +399,7 @@
             app:barrierDirection="bottom"
             app:constraint_referenced_ids="raceBox,genderBox" />
 
-        <!-- The section containing the Reset and Generate buttons -->
+        <!-- Layout holding the Reset and Generate character image buttons -->
         <LinearLayout
             android:id="@+id/extraButtons"
             android:layout_width="0dp"
@@ -402,7 +414,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
-            <!-- The Reset button -->
+            <!-- Button to clear all character fields -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/resetButton"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
@@ -421,7 +433,7 @@
                 android:gravity="center"
                 android:padding="0dp" />
 
-            <!-- The Generate Image button -->
+            <!-- Button that updates the character portrait on screen -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/generateButton"
                 style="@style/Widget.MaterialComponents.Button.TextButton"

@@ -8,9 +8,12 @@ import android.text.style.ReplacementSpan
 
 // This file creates the fancy gold underline effect used in the app title.
 class TitleUnderline (
-    private val underlineHeight: Float, // How thick the line is
-    private val goldColor: Int,         // The color of the line
-    private val verticalOffset: Float   // How far below the text the line sits
+    // How thick the line is
+    private val underlineHeight: Float, 
+    // The color of the line
+    private val goldColor: Int,         
+    // How far below the text the line sits
+    private val verticalOffset: Float   
 ) : ReplacementSpan() {
 
     // This part tells the app how much space the text needs
@@ -21,6 +24,7 @@ class TitleUnderline (
         end: Int,
         fm: Paint.FontMetricsInt?
     ): Int {
+        // Measure the width of the text
         return paint.measureText(text, start, end).toInt()
     }
 
@@ -36,24 +40,27 @@ class TitleUnderline (
         bottom: Int,
         paint: Paint
     ){
-        // First, draw the actual letters
+        // First, measure how wide the text is
         val width = paint.measureText(text, start, end)
+        // Draw the actual letters on the screen
         canvas.drawText(text, start, end, x, y.toFloat(), paint)
 
-        // Create a "fading" effect so the line starts and ends transparently
+        // Create a fading color effect (Transparent -> Gold -> Transparent)
         val gradient = LinearGradient(
             x,
             y + verticalOffset,
             x + width,
             y + verticalOffset,
-            intArrayOf(0x00FFFFFF, goldColor, 0x00FFFFFF), // Transparent -> Gold -> Transparent
+            intArrayOf(0x00FFFFFF, goldColor, 0x00FFFFFF), 
             floatArrayOf(0f, .5f, 1f),
             Shader.TileMode.CLAMP
         )
 
-        // Prepare the "paint brush" for the line
+        // Prepare the "paint brush" for drawing the line
         val underlinePaint = Paint(paint)
+        // Apply the fading color to the brush
         underlinePaint.shader = gradient
+        // Set the thickness of the line
         underlinePaint.strokeWidth = underlineHeight
 
         // Finally, draw the actual line under the text
