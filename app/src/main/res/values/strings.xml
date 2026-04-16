@@ -2,6 +2,7 @@
     <string name="app_name">RPGenerator</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
+    <string name="other">Other</string>
     <string name="name_hint">Enter Character\'s Name...</string>
     <string name="label">Label</string>
     <string name="title">RPGenerator</string>

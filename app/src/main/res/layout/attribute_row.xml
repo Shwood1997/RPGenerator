@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:background="@color/containers"
-    android:paddingTop="2dp"
-    android:paddingBottom="2dp">
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp">
 
     <!-- Format for the attributes rows' labels and values  -->
     <LinearLayout
