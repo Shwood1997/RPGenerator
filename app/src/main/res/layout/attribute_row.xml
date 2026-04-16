@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/containers"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp">
+
+    <!-- Format for the attributes rows' labels and values  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/attributeLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@null"
+            tools:text="Label"
+            android:fontFamily="@font/alegreya_sc"
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/attributeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25"
+            android:fontFamily="@font/alegreya_sc"
+            android:textColor="@color/gold"
+            android:textSize="14sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Layout for seekbars -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <SeekBar
+            android:id="@+id/attributeSeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progressTint="@color/gold"
+            android:thumbTint="@color/gold"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:splitTrack="false" />
+
+    </LinearLayout>
+
+</LinearLayout>

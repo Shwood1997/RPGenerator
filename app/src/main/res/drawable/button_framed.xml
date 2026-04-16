@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#40000000">
+    <item>
+        <selector>
+            <item android:state_pressed="true">
+                <layer-list>
+                    <!-- Glow -->
+                    <item>
+                        <shape android:shape="rectangle">
+                            <corners android:radius="8dp" />
+                            <solid android:color="#40FFD700" />
+                        </shape>
+                    </item>
+                    <!-- Frame -->
+                    <item android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp">
+                        <shape android:shape="rectangle">
+                            <stroke android:width="2dp" android:color="@color/gold_dark" />
+                            <solid android:color="@color/gold_dark" />
+                            <corners android:radius="4dp" />
+                        </shape>
+                    </item>
+                </layer-list>
+            </item>
+            <item>
+                <layer-list>
+                    <!-- Glow -->
+                    <item>
+                        <shape android:shape="rectangle">
+                            <corners android:radius="8dp" />
+                            <solid android:color="#20FFD700" />
+                        </shape>
+                    </item>
+                    <!-- Frame -->
+                    <item android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp">
+                        <shape android:shape="rectangle">
+                            <stroke android:width="2dp" android:color="@color/gold_dark" />
+                            <solid android:color="@color/gold" />
+                            <corners android:radius="4dp" />
+                        </shape>
+                    </item>
+                </layer-list>
+            </item>
+        </selector>
+    </item>
+</ripple>

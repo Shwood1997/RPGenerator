@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">RPGenerator</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="name_hint">Enter Character\'s Name...</string>
+    <string name="label">Label</string>
+    <string name="title">RPGenerator</string>
+    <string name="remaining">Remaining</string>
+    <string name="allocated">Allocated</string>
+    <string name="attributeTitle">Attribute Points</string>
+    <string name="attributes">Attributes</string>
+    <string name="gender">Gender</string>
+    <string name="characterName">Character Name</string>
+    <string name="classes">Class</string>
+    <string name="race">Race</string>
+    <string name="subtitle">Build your character!</string>
+
+    <!-- String array for the class spinner -->
+    <string-array name="class_options">
+        <item>Select a Class</item>
+        <item>Barbarian</item>
+        <item>Cleric</item>
+        <item>Rogue</item>
+        <item>Ranger</item>
+        <item>Wizard</item>
+    </string-array>
+
+    <!-- String array for the race spinner -->
+    <string-array name="race_options">
+        <item>Select a Race</item>
+        <item>Human</item>
+        <item>Dwarf</item>
+        <item>High Elf</item>
+        <item>Orc</item>
+        <item>Goblin</item>
+    </string-array>
+
+</resources>
