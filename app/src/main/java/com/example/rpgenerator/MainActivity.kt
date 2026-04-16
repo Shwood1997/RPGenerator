@@ -233,6 +233,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Finds the character image based on the selected class
+    // These images are AI generated to keep a consistent art style
     private fun updateCharacterImage() {
         // Check if a class has been picked
         if (classSpinner.selectedItemPosition > 0) {
