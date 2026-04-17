@@ -140,7 +140,6 @@ class MainActivity : AppCompatActivity() {
         viewModel.remainingPoints.observe(this) { 
             remainingPointsText.text = it.toString() 
         }
-
         // Change the character image on screen when it updates in the background
         viewModel.characterImageResId.observe(this) { resId ->
             characterImage.setImageResource(resId)
@@ -170,8 +169,6 @@ class MainActivity : AppCompatActivity() {
         raceSpinner.setSelection(0)
         // Tell the background logic to reset all points
         viewModel.reset()
-        // Show a small popup message saying everything was reset
-        Toast.makeText(this, "Fields Reset", Toast.LENGTH_SHORT).show()
     }
 
     // Configures a slider to update the ViewModel when moved
@@ -233,7 +230,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Finds the character image based on the selected class
-    // These images are AI generated to keep a consistent art style
+    // These images are AI generated to keep a consistent
     private fun updateCharacterImage() {
         // Check if a class has been picked
         if (classSpinner.selectedItemPosition > 0) {

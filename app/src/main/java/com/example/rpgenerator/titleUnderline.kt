@@ -45,7 +45,7 @@ class TitleUnderline (
         // Draw the actual letters on the screen
         canvas.drawText(text, start, end, x, y.toFloat(), paint)
 
-        // Create a fading color effect (Transparent -> Gold -> Transparent)
+        // Create a fading color effect
         val gradient = LinearGradient(
             x,
             y + verticalOffset,
@@ -56,14 +56,14 @@ class TitleUnderline (
             Shader.TileMode.CLAMP
         )
 
-        // Prepare the "paint brush" for drawing the line
+        // Prepare the paint object for drawing the line
         val underlinePaint = Paint(paint)
         // Apply the fading color to the brush
         underlinePaint.shader = gradient
         // Set the thickness of the line
         underlinePaint.strokeWidth = underlineHeight
 
-        // Finally, draw the actual line under the text
+        // Draw the actual line under the text
         canvas.drawLine(
             x,
             y + verticalOffset,
